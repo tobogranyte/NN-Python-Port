@@ -16,7 +16,7 @@ def nnCostFunctionVec (nn_params, input_layer_size, hidden_layer_size, num_label
 
 	ident = np.eye(Theta2.shape[0])
 
-	yNodes = ident[y].T
+	yNodes = ident[y.flatten()].T
 	yNodes = np.append(yNodes[1:,], yNodes[0:1,], axis=0)
 
 
